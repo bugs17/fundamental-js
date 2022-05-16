@@ -38,6 +38,27 @@
         };
 
         console.table(data1);
+        // untuk cara menambahkan data ke dalam tipedata object ini caranya.
+        // beda dengan array yg menggunakan .push("datanya"). tapi kalau di object
+        // tong pake kaya bgni data["key"] = "valuenya".
+
+        data["name"] = "azovy jhon";
+        data["age"] = 3;
+        // lalu ini cara mengedit/update datanya sama juga dengan menambahkan data
+        // tapi keynya juga harus sesuai.
+        data["name"] = "mama nha";
+        data["age"] = 23;
+
+        data["alamat"] = "jayapura";
+        data["phone"] = 082248458305;
+
+        console.table(data);
+
+        // nah kalau delete ini tong pilih deletenya berdasarkan atribut/properties/key nya
+        // seperti mau hapus data nama kan key nya itu nama jadi nama sebagai targetnya
+
+        delete data["name"];
+        console.table(data);
     </script>
 </body>
 
