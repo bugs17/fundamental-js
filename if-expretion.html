@@ -33,12 +33,51 @@
             )
         }
 
+        document.writeln("</br>");
+        document.writeln("</br>");
+        document.writeln("</br>");
+
         // jadi kondisi if itu akan di eksekusi jika bernilai true
         // ee dalam state if(kondi disini) -->> dan kalau kondisi bernilai true
         // block kode if akan di eksekusi.
         // nah kalau false trakan di eksekusi program tetap berjalan.
         // tpi kalau ko mau tambahkan sesuatu jika kondisi false ko mau runing program lain
         // ko bisa masukan ke dalam state else. nah di else sini ni kalau semua kondisi false else akan di eksekusi.
+
+
+        // yg di atas mungkin komplex kalau ko baru blajar
+        // mungkin yg bawah ini ko bisa lebih paham pas baca codingan ini.
+        // kondisinya cuma kondisi operator perbandingan jdi lebih mudah
+        // kalau yg cntoh di atas tu ada perbandingan dan logika AND
+        const hasilUjian = 80;
+
+        if (hasilUjian >= 70) {
+            document.writeln(`nilai ujian ${hasilUjian} slamat ko lulus`);
+        } else {
+            document.writeln(`nilai ujian ${hasilUjian} gagal silahkan coba lagi yahun depan`);
+        }
+
+
+        document.writeln("</br>");
+        document.writeln("</br>");
+        document.writeln("</br>");
+
+        // nah dari dua contoh di atas tu cuma satu cabang dengan defaultnya itu else sebagai kondisi false
+        // trus bgmn kalau ada beberapa cabang kaya kalo di python tu elif. nah di JS sini juga
+        // percabangan selanjutnya itu pake else if contohnya kaya bgni
+
+        const Nilai = 80;
+
+        if (Nilai > 70) {
+            document.writeln("Nilai A");
+        } else if (Nilai > 60) {
+            document.writeln("Nilai B");
+        } else if (Nilai > 50) {
+            document.writeln("Nilai C");
+        } else {
+            document.writeln("Nilai E");
+
+        }
     </script>
 
 </body>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Null</title>
+</head>
+
+<body>
+    <script>
+        /*
+        null ini merupakan representase data kosong, jadi jng bingung antara null
+        dan undefined. null dan undefined ni berbeda ee. kalo sebuah variabel datanya di set null
+        maka datanya sudah ada tapi null sedangkan undefined itu datanya tidak ada.
+        membingungkan memang to hahah 🤣 sudah ko pahami saja.
+        
+        */
+
+        // disini tong set variabel name nilainya null, artinya nilainya sudah di sett tapi kosong
+        // beda kalau tong tra set nilai sama skali berari itu undefined. sama kaya tong set nilai ke undefined. itu sama saja dng nilainya blum di set.
+        // pusing to hahahaha sa juga pusing 🤣
+        let name = null; //tong set null disini nanti kondisi null di bawah juga yg akan di eksekusi,
+
+
+        // ini cuma untuk pengecekan saja sebagai pembuktian kalo null dan undefined itu berbeda
+        if (name === undefined) {
+            console.info("name undefined");
+        } else if (name === null) {
+            console.info("name null");
+        } else {
+            console.info(`${name}`);
+        }
+    </script>
+</body>
+
+</html>

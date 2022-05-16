@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+</head>
+
+<body>
+    <script>
+        /*
+        di JS ini ada fitur popup. ada 3 yaitu alert,prompt dan confirm
+        nah ini fitur bisa tong pake untuk bikin kaya mini window yg popup untuk terima inputan
+        atau sekedar kasih pertanyaan ke user nanti ko paham kalau ko baca beberapa baris
+        kode dibawah ini..
+        ooh io trus fitur popup ini bawaan browser ee ingat.
+
+        alert ====== dipake untuk menampilkan string text ke user
+        prompt ====== untuk meminta inputan dari user
+        confirm ====== untuk menampilkan pilihan yes or no nilai hasil dari confirm berupa boolean.
+        */
+
+        // ini contoh allert
+
+        alert("Selamat Datang");
+
+
+        // // beberapa contoh penggunaan
+        const name = prompt("Siapa nama anda?")
+
+        const akses = "azovy";
+
+        if (name == akses) {
+            document.writeln(`hallo selamat datang ${name}`);
+        } else if (name === null || name === undefined) {
+            alert(`mohon masukan nama anda`);
+
+        } else {
+            alert(`${name} maaf anda tidak punya akses`);
+            confirm("apa kah anda mau mencoba lagi?");
+
+
+        }
+
+
+        //kalo baris kode yg dibawah ini confirm, popup untuk memberikan dua pilihan
+        // ke user antara yes atau cancle dan kembaliannya bernialai boolean yes = true, cancle = false
+        // nah bru sa kasmasuk dalam satu variabel nilai kembaliannya, baru sa cek kondisinya
+        // pake if expression. kalo true block if executed kalo false else executed.
+        // jadi bgtu ko pasti su mengerti
+        const input = confirm("apakah anda yakin?");
+
+        if (input == true) {
+            document.writeln("ko tekan \'OK\'");
+        } else {
+            document.writeln("ko tekan \'CANCLE\'");
+        }
+
+
+
+
+
+        //ini cuma tes game sederhana yg baris di bawah ini haha
+        // const input = prompt("tebak dady punya angka rahasia!!!")
+
+        // const angka = 7;
+
+        // if (input == angka) {
+        //     alert(`selamat kamu berhasil menebak angka rahasianya 😍, ${input}`);
+        //     // window.location.reload();
+        // } else if (input > angka) {
+        //     alert(`😝 angka rahasianya lebih kecil dari ${input}, coba lagi 😁`);
+        //     window.location.reload();
+        // } else if (input < angka) {
+        //     alert(`😝 angka rahasianya lebih besar dari ${input}, coba lagi 😁`);
+        //     window.location.reload();
+        // } else {
+        //     alert("Game Over");
+        // }
+    </script>
+</body>
+
+</html>

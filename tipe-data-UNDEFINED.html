@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipe-data-undefined</title>
+</head>
+
+<body>
+    <script>
+        /*
+        ini sebuah tipedata jng sampe ko salah paham undefined ini dng null mirip"
+        nah undefined ini macam deklarasi satu variabel tapi blum kasih nilai. maka de pu nilai itu
+        undefined. beda dngn kalo tong isi de pu nilai itu null. ooh io null ni kaya python pass bgtu kalo trasalah sa juga lupa" sdikit
+        blum bakrok jadi.
+        contohnya kaya bgni
+        */
+
+        let data; // jika variable ini tidak diisi datanya maka nilainya undefined
+
+        // lalu disini tong bikin kondisi untuk mengecek apakah data tersebut bernilai undefined
+        // atau bukan. dan kalau undefined tampilkan string UNDEFINED dan kalau bukan maka tampilkan DEFINED
+        // untuk coba" nanti ko bisa isi atau hapus nilai dari variable data diatas.
+        if (data === undefined) {
+            console.info("UNDEFINED");
+        } else {
+            console.info("DEFINED");
+        }
+
+        /*
+        nah trus kalo misalnya tong bikin data array trus tong coba akses
+        index pada array yg tdk ada maka return atau kembaliannya itu undefined
+        maksudnya tu kaya contoh dibawah ini.
+        */
+
+        // di array dibawah ini tong cuma masukan 3 data saja, jadi index terahirnya 2 trus coba tong akses
+        // index ke 3 maka hasilnya pasti undefined.
+        let cekData = ["rio", "rina", "azov"];
+        console.info(cekData[3]); //mengakses index ke 3 pada aray cekData
+
+        // tong coba lagi pake cek kondisi if. kalau misalnya datanya undefined
+        //tong print tulisan data trada atau apapun terserah ko
+        // dan elsenya data ada atau bukan undefined, jadi kalo coba mengakses index yg tdk ada pada array
+        // if akan di eksekusi, tapi kalo akses index yg ada maka else yg di eksekusi
+        //
+
+        // ok skrng coba tong delete index 0 di array baru tong cek. pasti hasilnya tu undefined kalo mau akses index yg tong su hapus.
+        // sebenarnya pas tong hapus data di array tu sebenarnya tong lakukan 
+        // kaya bgni cekData[0] = undefined <--- jadi sebenarnya tu kaya index ke 0 itu kaya tong set dia ke undefined bgtu
+        // mari tong tes hapus baru akses coba
+
+        delete cekData[0]; //tong hapus index ke 0 jdi kalo di cek index ke 0 su undefined
+
+        // nah trus pas tong kasmasuk data lagi ke index 0 bgni de terisi lagi dan index ke 0 tdk undefined lgi
+        cekData[0] = "rio lagi";
+
+        if (cekData[0] === undefined) {
+            console.info("data yg di cari tidak ada");
+        } else {
+            console.info("datanya ada");
+        }
+
+        cekData.push("bugs", "mama nha"); // coba masukan dua data baru ke array 😁
+        console.table(cekData);
+
+        // yoo trus sama juga dng data object {} kalo ko akses key yg tdk ada maka hasilnya undefined juga.
+        // tong tes bikin dibawah ini.
+
+        let dataTest = {};
+
+        if (dataTest.name === undefined) {
+            console.info("data undefined")
+        } else {
+            console.info(`hallo ${dataTest.name}`)
+        }
+
+        // atau untuk asah ko punya logika coba tong balik kemungkinannya. sama saja cuma di balik
+        // yg diatas kan sama dengan coba tong bikin tdk sama dengan. jadi if fi eksekusi karna data name
+        // tdk sama dengan undefined. ko bandingkan saja duabuah kode yg dibawah ini dng yg diatas
+
+        if (dataTest.name !== undefined) {
+            console.info(`hallo ${dataTest.name}`)
+        } else {
+            console.info("data undefined")
+        }
+    </script>
+</body>
+
+</html>

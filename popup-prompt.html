@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup-prompt</title>
+</head>
+
+<body>
+    <script>
+        /*
+        nah kalau prompt ini menerima inputan dari user, jadi balikannya tu nilai yg di masukan dari user
+        apa pun yg dimasukan oleh user dari popup prompt ini hasilnya tetap berupa string
+        meskipun user menginputkan angka 7 tapi tipenya bukan number 7 tapi string 7
+
+        */
+
+        // contoh prompt-- prompt("text yg mau di tampilkan")
+
+        const inputan = prompt("coba masukan sesuatu"); // menangkap inputan dari user dan memasukan ke variable inputan
+
+        document.writeln(`${inputan}`); // printout data inputan
+        document.writeln("</br>"); // baris baru
+        document.writeln(`${typeof inputan} ${inputan}`); // mengecek tipe data yg dimasukan user
+    </script>
+</body>
+
+</html>
