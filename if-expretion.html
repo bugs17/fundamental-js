@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if--expretion</title>
+</head>
+
+<body>
+
+    <script>
+        const nilaiUjian = 80;
+        const nilaiAbsen = 50;
+
+
+        // coba ko lihat disini biarpun salah satu nilai true
+        // tapi disini tong bandingkan dua nilai boolean dengan
+        // operator logika and && dan tong tau kalu and salah satunya false saja
+        // maka hasilnya pasti false. jdi nilaiUjian su true abis itu nilaiAbsen false
+        // jadi tong bandingkan kedua nilai boolean dengan logika AND && jadi hasilnya false
+        // makanya kondisi if di lewati dan else di eksekusi. semoga ko paham
+        if (nilaiUjian > 60 && nilaiAbsen > 60) {
+            // sama seperti python kalau kondisi if diatas true maka blok ini
+            // akan di eksekusi.
+            document.writeln(`Nilai Ujian ${nilaiUjian} dan Absen ${nilaiAbsen}, SELAMAT KAMU LULUS`)
+        } else {
+            // dan kalau false lalu ingin menampilkan sesuatu
+            // maka tambahkan di dalam block else ini.
+            document.writeln(
+                `Nilai Ujian ${nilaiUjian} dan Absen ${nilaiAbsen}, salah satu nilai kamu tidak memenuhi standar, KAMU TIDAK LULUS`
+            )
+        }
+
+        // jadi kondisi if itu akan di eksekusi jika bernilai true
+        // ee dalam state if(kondi disini) -->> dan kalau kondisi bernilai true
+        // block kode if akan di eksekusi.
+        // nah kalau false trakan di eksekusi program tetap berjalan.
+        // tpi kalau ko mau tambahkan sesuatu jika kondisi false ko mau runing program lain
+        // ko bisa masukan ke dalam state else. nah di else sini ni kalau semua kondisi false else akan di eksekusi.
+    </script>
+
+</body>
+
+</html>
