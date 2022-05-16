@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string-template</title>
+</head>
+
+<body>
+    <script>
+        /*
+        oke kali ini tong blajar yg namanya string template di js ni kalo
+        tong mau tulis atau panggil variabel dalam string tu agak ribet karna 
+        harus pake tandah + untuk menambahkan string dengan variable.
+        tapi kalau pake yg namanya string template ini bisa tong panggil variable
+        tanpa harus keluar dari string itu sendiri. tapi di string template
+        tong tidak pake tanda petik satu '', atau petik dua "". tapi
+        tong pake tanda backtik ``.
+        dan di dalam backtick pada saat tong mau panggil variable nya
+        pake tanda ${variable} ..... kaya bgtu kira2.
+        
+        eeh biasanya di python tu sebutannya string formated kalo tra salah ingat.
+        */
+
+        const name = "Azovy John";
+        const result = 5 ** 3;
+        const value = 70;
+
+        console.info(`name : ${name}`); // contoh implementasi string template
+        console.info(`5 ** 2 = ${result}`); // contoh implementasi string template
+
+        // biasa melakukan perbandingan di dalamya juga sekalian, lihat contoh ini.
+        console.info(`Name : ${name} ---- lulus : ${value > 75}`);
+
+        // trus di string template ini juga tong bisa bikin multiline string
+        // maksudnya bisa tulis trung beberapa baris sekalian.
+
+        const multiLine = `Ini adalah
+contoh
+multi line string`
+
+        document.writeln("<pre>");
+        document.writeln(multiLine);
+        document.writeln("</pre>");
+    </script>
+
+</body>
+
+</html>

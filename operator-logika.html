@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator-logika</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        ok kali ini tong akan coba operator logika yg ada pada js, jadi di js tu
+        operator logika itu membandingkan dua buah nilai boolean dan hasilnya juga boolean lagi
+        ini contoh operator logika
+        #####################################
+        nilai           and         nilai       hasil
+
+        true            &&          true        true
+        true            &&          false       false
+        false           &&          true        false
+        false           &&          false       false
+
+        jadi kalo operator logika anda tandanya &&, trus kalo lihat
+        tabel di atas tong bisa lihat kalo dari perbandingan dan kalau
+        salah satu nilai ada yg false maka hasilnya pasti false.
+        akan true kalau keduanya nilai true.
+        #######################################
+
+        #######################################
+        nilai           or         nilai       hasil
+
+        true            ||          true        true
+        true            ||          false       true
+        false           ||          true        true
+        false           ||          false       false
+
+        kalau or ni || kebalikan dari dan, jadi kalau salah satu nilai saja true maka hasilnya
+        pasti true juga akan false kalau kedua nilainya false.
+        ##########################################
+        
+        ##########################################
+        kalau yg satu ini di sebut juga operator logika unary
+        karena cara penulisanya, nah yg satu ini itu untuk membalikan nilai
+
+        kebalikan          nilai       hasil
+
+        !                  true        false
+        !                  false       true
+        !                  true        false
+        !                  false       true
+
+        operator logika satu ini hanya butuh satu nilai. nah fungsinya untuk membalikan
+        nilainya jadi kalau !false hasilnya pasti true, begtu jga sebaliknya.
+        
+        ok tong coba tes langsung
+        */
+
+        const nilaiUjian = 80;
+        const nilaiAbsen = 70;
+
+        const lulusUjian = nilaiUjian > 75;
+        const lulusAbsen = nilaiAbsen > 75;
+
+
+        // hasilnya false pasti karna kedua nilai salah ada yg false. 
+        // hasilnya bisa true kalau kedua nilainya true
+        let result = lulusUjian && lulusAbsen;
+        document.writeln(result);
+        document.writeln("</br>");
+
+        //nah kalau pakai logika or || salah satu true maka hasil pasti true.
+        let result1 = lulusUjian || lulusAbsen;
+        document.writeln(result1);
+        document.writeln("</br>");
+
+        // ini contoh logika unary atau kebalikan dari nilai yg ada.
+        let lulus = true;
+
+        // variable lulus nilainya trus tapi pada saat di print
+        // nilainya jadi false karena di balik nilainya. !
+        document.writeln(!lulus); // hasilnya false karena dibalik nilainya
+        document.writeln("</br>");
+    </script>
+
+</body>
+
+</html>

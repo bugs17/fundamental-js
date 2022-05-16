@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>konversi-tipe-data</title>
+</head>
+
+<body>
+    <script>
+        /*
+        ok biasanya tong terima inputan dari user tu tipe datanya bertipe string
+        tapi kalau data inputan itu tong mau olah dalam operasi matematika tidak bisa 
+        karna tong harus rubah dulu ke tipe data number.
+        ini namanya konversi tipe data string ke number atau sebaliknya.
+        di python juga ada coba ko ingat" lagi. I love python :D hahaaa
+
+        ###########################################################
+        
+        Function                    keterangan
+        parseInt(string)            konversi dari string ke number (bilangan bulat)
+        parseFloat(string)          konversi dari string ke number (bilangan pecahan atau float)
+        Number(string)              konversi dari string ke number (pecahan atau bulat)
+        .toString()                 konversi dari number ke string
+
+        ############################################################
+        */
+
+        const value1 = '1';
+        const value2 = 2;
+        const sum = value1 + value2;
+
+        // hasil dari operasi diatas kalo di print jadinya 12 bukan 3
+        // karena angka 1 itu string bukan number jadi seperti ini
+        // kalau mau di jumlahkan keduanya harus di rubah dulu dari string ke number
+        document.writeln(`<p> ${sum} </p>`)
+        document.writeln("</br>");
+
+        // nah ini contohnya
+        const value3 = '1';
+        const value4 = 2;
+        const sum2 = Number(value3) + value4; // disini tong rubah tipe data value4 ke number
+        document.writeln(`<p> ${sum2} </p>`)
+
+        const a = 1;
+        const b = 1;
+        const total = a + b;
+        const total2 = a.toString() + b.toString();
+
+        document.writeln(total.toString()); // hasilnya 2 tapi string bukan number
+        document.writeln('</br>')
+        document.writeln(`${total2}`); // hasilnya pasti 11 karena string 1 + string 1
+        document.writeln('</br>')
+
+        /*
+        lalu bgmn kalau ternyata variabel yg menampung inputan dari user yg mau di konversi ke number
+        ternyata user menginputkan bukan number contohnya user menginputkan huruf B
+        kan B tdk bisa di konversi ke number. nah di JS ini nanti akan di balikan respon NaN atau (Not a Number)
+        contohnya bisa lihat dibawah ini.
+        */
+
+
+        //hasilnya NaN. karena di konversi ke Int tapi datanya huruf
+        // tapi jika dari seluruh karakter bagian depannya berupa angka maka
+        // angka tersebut akan di ambil dan karakter sisanya di hiraukan
+        document.writeln(`${parseInt('1salah')}`); // Hasilnya 1 
+        document.writeln('</br>')
+        document.writeln(`${parseInt('salah')}`); // Hasilnya NaN
+        document.writeln('</br>')
+        document.writeln(`${parseInt('a12salah')}`); // Hasilnya NaN karna karakter paling depan bukan angka
+        document.writeln('</br>')
+
+        document.writeln(`${parseFloat('1.2salah')}`); // hasilnya 1.2
+        document.writeln('</br>')
+
+
+        // NaN nah kalau yg Function Number dia akan kembalikan NaN karena datanya tercampur dengan karakter yg bukan angka
+        document.writeln(`${Number('130salah')}`); // Hasilnya NaN
+        document.writeln('</br>')
+        document.writeln(`${Number('1.2salah')}`); // NaN
+        document.writeln('</br>')
+
+
+        /*
+        nah di js ini ada satu function yg dipake untuk mengecek apakah sebuah data itu
+        dia NaN atau bukan. functionnya tu kaya bgni isNaN(cekdisini).
+        contohnya
+        */
+
+        const nilai = 'it is not a number';
+        // menggunakan function isNaN() untuk mengecek apakan data tersebut
+        // Not a Number atau bukan. hasilnya boolean true atau false
+        document.writeln(`${isNaN(nilai)}`);
+    </script>
+
+</body>
+
+</html>

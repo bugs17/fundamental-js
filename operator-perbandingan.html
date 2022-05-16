@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perbandingan</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        nah operator perbandingan ini biasa dipake untuk membandingkan dua nilai
+        biasanya hasilnya itu true/false, tong bisa membandingkan dua nilai dengan operator perbandingan ini
+        ini beberapa contoh operator perbandingan.
+        ##################################################
+        >       ==========      lebih besar dari
+        <       ==========      lebih kecil dari
+        ==      ==========      sama dengan
+        ===     ==========      sama dengan dan sama type
+        !=      ==========      tidak sama dengan
+        !==     ==========      tidak sama dengan atau tdk sama type
+        >=      ==========      lebih besar atau sama dengan
+        <=      ==========      lebih kecil atau sama dengan
+        ###################################################
+
+        nah hasil dari perbandingan 
+        kedua nilai yg di bandingkan jika niainya benar maka hasilnya true
+        sebaliknya kalau salah berarti hasilnya false. maksudnya bgni
+
+        2 > 1 // true, karena benar hasilnya 2 lebih besar dari satu
+        
+        contoh diatas pasti ko su paham bugs.
+        */
+
+        let nilai1 = 1;
+        let nilai2 = 2;
+        let nilai3 = 3;
+        let nilai4 = 3;
+        let nilai5 = "3"
+
+
+        perbandingan = nilai1 > nilai2; //hasilnya pasti true
+        document.writeln("1 > 2 = " + perbandingan); //false
+        document.writeln("</br>")
+
+        perbandingan = nilai1 < nilai2; //hasilnya pasti true
+        document.writeln("1 < 2 = " + perbandingan); //true
+        document.writeln("</br>");
+
+        perbandingan = nilai1 == nilai2; //hasilnya pasti false
+        document.writeln("1 == 2 = " + perbandingan); //false
+        document.writeln("</br>");
+
+        perbandingan = nilai1 != nilai2; //hasilnya pasti true
+        document.writeln("1 != 2 = " + perbandingan); //true
+        document.writeln("</br>");
+
+
+
+        // nah jng bingung karna kalau operasi ini dibacanya lebih dari atau samadengan, kurangdari atau sama dengan. makanya nilainya true karna 3 lebih dari atau sama dengan 3? iya sama dengan
+        perbandingan = nilai3 >= nilai4; //hasilnya pasti true
+        document.writeln("3 >= 3 = " + perbandingan); //true
+        document.writeln("</br>");
+
+        perbandingan = nilai3 <= nilai4; //hasilnya pasti true
+        document.writeln("3 <= 3 = " + perbandingan); //true
+        document.writeln("</br>");
+
+
+        // false karena meskipun keduanya angka 3 tapi tipe datanya berbeda number dan string
+        perbandingan = nilai4 === nilai5;
+        document.writeln("3 === " + nilai5 + " = " + perbandingan);
+        document.writeln("</br>");
+    </script>
+
+</body>
+
+</html>

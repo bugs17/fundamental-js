@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+
+<body>
+    <script>
+        /*
+        tipe data string ni tipe data kosong atau sekumpulan karakter.
+        maksudnya tu string ni boleh tidak ada karakter apapun. atau cuma spasi saja juga boleh.
+        tipe data string ini di apit dengan tanda petik ("string") <-- contoh string petik dua, bisa pakai petik satu atau petik dua
+        tidak masalah ('string') <--- ini contoh yg pake petik satu.
+        */
+        document.writeln('string petik satu'); //string dengan petik satu 
+        document.writeln("</br>");
+        document.writeln("string petik dua"); //string dengan petik dua 
+        document.writeln(''); //string kosong, tidak ada karakter apapun yg di tulis 
+        document.writeln("</br>");
+
+        document.writeln("hallo " + "bugs"); //ini contoh saat kita menambahkan atau kombinasi beberapa string 
+        document.writeln("</br>");
+        document.writeln("Nama : " + "bugs");
+        document.writeln("</br>");
+
+        /*
+        nah kalau ini adalah contoh penambahan karakter khusus, atau biasa di sebut
+        escape sequence. ee yg sa maksud itu seperti kalo mau tambahkan Tab,Enter, atau tanda petik ",'
+        ini beberapa contoh penambahan escape sequence.
+        \t          ======= TAB
+        \n          ======= ENTER
+        \'          ======= '
+        \"          ======= "
+        \\          ======= \
+        */
+
+        // ini contoh penggunaannya, sa bikin di dalam textarea supaya kelihatan enter atau tabnya
+        document.writeln("<textarea cols='100' rows='10'>");
+        document.write("hallo \nnama saya rionaldi lausiri \nbiasa di panggil bugs.");
+        document.write("ini contoh \nalamat :\tjayapura \nno :\t082248458305\n");
+        document.writeln("\"saya adalah seorang developer program\"")
+        document.writeln("</textarea>");
+        document.writeln("</br>");
+    </script>
+</body>
+
+</html>

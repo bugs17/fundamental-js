@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipe-data-array-atau-list</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+    ee di JS ini list atau array ni sama saja.
+    jadi tong bisa bikin array kosong lalu isi data ke dalam array atau list ni sebanyak yg tong mau
+    tanpa harus tentukan panjang array atau list nya di awal.
+    maksudnya begini bugs kan array atau list itu tipe data yg menampung beberapa data dan tiap data yg dimasukan itu
+    punya nomor urut atau biasa sebutannya index. nah di JS sini tong traperlu
+    tentukan panjang indexnya di awal seperti bahsa solidity tu tong harus tentukan panjang arraynya saat bikin arraynya
+    nah kalo di JS ni mirip kaya python list atau array ni bebas mau diisi berapa banyak datanya.
+    data array/list tu di simpan di dalam tanda [index0, index1, index2, index3].
+    nah itu di atas tu contoh array/list dan juga index atau urutan datanya yg sa maksud.
+    */
+
+        const listKosong = [];
+        let listNamaDanDataRandom = ['rionaldi', 'azovy john', 'mama nha', 70, true, false, 1000];
+
+        document.writeln(listNamaDanDataRandom);
+        document.writeln("</br>");
+
+
+        //mengakses variable yg menampung data arraynya tapi tong akses data array berdasasrkan indexnya
+        // contohnya kaya dibawah ini.
+        document.writeln(listNamaDanDataRandom[2]);
+        document.writeln("</br>");
+        document.writeln(listNamaDanDataRandom[4]);
+        document.writeln("</br>");
+
+
+        // trus variable listKosong di atas itu tong bisa isi data kedalam variable itu nanti
+        // dan harus ingat tong su bikin kaya diatas tu jadi variable listKosong itu skrng bertipe array/list.
+        // di bawah ini contoh tong menginput data ke dalam array/list.
+        // pake function .push('datalist1', 'datalist2', 1, 7, true, false)
+        listKosong.push('rionaldi lausiri');
+        listKosong.push('azovy jhon', 'mama nha', 'dady bugs');
+
+        console.table(listKosong); // tong coba print di console nanti panjang array kelihatan
+
+        document.writeln(listKosong.length); // cek panjang array pake .length
+        document.writeln("</br>");
+        document.writeln(listKosong[3]);
+        document.writeln("</br>");
+        document.writeln(listKosong);
+        document.writeln("</br>");
+
+
+        /*
+        nah kalau tong mau merubah data dalam array atau menghapus data array berdasarkan
+        urutan index tertentu tong bisa pake beberapa operasi di bawah ini.
+
+        ###########################################################
+        
+        operasi                                 keterangan
+
+        array.push(data1, 'datastring2')        ini untuk memasukan data kedalam array
+        array.length                            untuk mengecek panjang arraynya.
+        array[index]                            mengambil data array berdasarkan indexnya
+        array[index] = value                    mengubah data array dengan index tertentu yg dipilih
+        delete array[index]                     menghapus data pada index namun indexnya tra bergeses
+        */
+
+        delete listKosong[1]; // menghapus data array berdasarkan indexnya
+        document.writeln(listKosong);
+        document.writeln("</br>");
+
+        console.table(listKosong);
+
+        listKosong.push('azovy john');
+        document.writeln(listKosong);
+        document.writeln("</br>");
+        // jadi opersi di atas indexnya tdk bergeser maksudnya tu kan index satu dengan valuenya su dihapus
+        // jadi data dan index tdk bergeser data yg di index 2 tdk bergeser ke index satu. karna delete ini bukan hapus valuenya tapi
+        // hapus beserta index arraynya. jadi ketika ada data baru masuk tetap melanjutkan index terahir
+        // tetapi indexnya masih ada jika di push data kedalam index yg di hapus maka indexnya akan ada lagi
+        // jadi kasus di atas ni index terahir 4 panjang array juga 4.
+
+
+        listKosong[2] = 'nilai baru'; // update nilai pada array berdasarkan indexnya.
+        document.writeln(listKosong);
+        document.writeln("</br>");
+
+        console.table(listKosong);
+
+        listKosong[1] = 'ganti index 1 yg sudh di hapus';
+        listKosong.push(1, 2, 3, 4, 5, 6); // memasukan nilai bertipe number ke array
+        console.table(listKosong);
+
+        // ok jadi harus di ingat array bisa menampung tipe data apapun tdk cuma string.
+        // bahkan tong bisa memasukan array lagi ke dalam array kalo tong mau. jadi ada array di dalam array.
+    </script>
+
+</body>
+
+</html>

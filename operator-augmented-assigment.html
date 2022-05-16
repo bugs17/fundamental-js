@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator-augmented-assighment</title>
+</head>
+
+<body>
+    <script>
+        /* 
+        ###########################################################
+                    --augmented assignments--
+        nilai = 3;
+
+        nilai = nilai + 1;      ===========     nilai += 1;
+        nilai = nilai - 1;      ===========     nilai -= 1;
+        nilai = nilai * 1;      ===========     nilai *= 1;
+        nilai = nilai / 1;      ===========     nilai /= 1;
+        nilai = nilai % 1;      ===========     nilai %= 1;
+        nilai = nilai ** 1;     ===========     nilai **= 1;
+        */
+
+        let hasil = 1 + 2;
+        document.writeln("1 + 2 = " + hasil);
+        let originalHasil = hasil;
+        document.writeln("</br>")
+
+        hasil -= 1; // ini contohnya augmented assignments
+        document.writeln(originalHasil + " - 1 = " + hasil);
+        originalHasil = hasil;
+        document.writeln("</br>")
+
+        hasil *= 2; // ini contoh augmented assignments
+        document.writeln(originalHasil + " * 2 = " + hasil);
+        originalHasil = hasil;
+        document.writeln("</br>")
+
+        hasil /= 2; // ini contoh augmented assignments
+        document.writeln(originalHasil + " / 2 = " + hasil);
+        document.writeln("</br>")
+    </script>
+</body>
+
+</html>

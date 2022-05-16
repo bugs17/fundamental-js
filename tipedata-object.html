@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipe data object</title>
+</head>
+
+<body>
+    <script>
+        /*
+    ok jadi kali ini tong akan bljr satu tipe data lagi di JS. kalo sebelumnya tong su tau
+    dng array/list, nah kali ini tipe data yg satu ini de pu nama tipedata object kalo di JS.
+    kalo di python biasanya sebutannya dictionary dict. kalo di js ni object sebutannya.
+    itu tu kosong atau lebih data yg tertampung dalam tanda {}.
+    kalo list/array tandanya [], nah kalo object tandanya kaya bgni {}.
+    ok mari tong tes saja langsung.
+    */
+
+        let data = {}; // data object kosong belum diisi,
+        // data object yg sudah di isi atau di tulis secara hardcode,
+        // trus dalam data object juga sama seperti di array bisa beberapa dimensi.
+        // maksudnya tu di dalam object ada object lagi. sperti contoh dibawah ini
+        // dan kalau di array tu indexnya tdk bisa di rubah maksudnya indexnya tetap berupa angka 0 dan seterusnya
+        // tpi kalau di tipedata object ini indexnya bisa berupa string contohnya kaya "nama" : "rionaldi"
+        // ini sebenarnya kalo di python tong sebut key value di dictionary.
+        let data1 = {
+            "name": "rionaldi",
+            "special": "fullstack",
+            "addres": {
+                "country": "indonesia",
+                "region": "papua",
+                "state": "jayapura",
+            },
+            "phone": 082248458305,
+        };
+
+        console.table(data1);
+    </script>
+</body>
+
+</html>
