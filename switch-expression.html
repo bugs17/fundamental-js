@@ -12,8 +12,34 @@
     <script>
         /*
         switch ni fungsinya untuk apa??? masri tong lhat dan pahami.
+        nah kalau tong cuma mau cek kondisi sederhana saja seperti sama dengan ==
+        ini sama saja dng kondisi percabangan if cumanya switch ni de lebih simple.
+        lebih cocok kalo tong pake di pengecekan kondisi yg simple seperti tdi sa bilang
+        tong mau cek persamaan dari dua buah nilai atau dua buah variable.
+        tong bisa pake switch ni saja. tpi harus dipaham kalo di if statemen perbandingan bisa banyak buakan
+        hanya == tpi kalo di switch ini hanya bisa cek perbandingan sama dengan ==
         
+        contoh penulisannya kaya di bawah ini
         */
+
+
+        const nilai = "A";
+
+        switch (nilai) {
+            case "A": // case ni kaya if. jadi maksudnya jika nila == A
+                console.info("selamat ada LULUS dengan nilai A");
+                break // ooh io jng lupa break ini harus di kasih agar dia stop setelah mengeksekusi perintahnya
+            case "B": // jika nilai sama dengan B maka ini eksekusi
+                console.info("Selamat anda Lulus dengan nilai B");
+                break
+            case "C": // jika nilai sama dengan C maka ini eksekusi
+                console.info("selamat anda Lulus dengan nilai C");
+                break
+            case "D": // jika nilai sama dengan D dan E maka ini eksekusi
+            case "E":
+                console.info("Anda tidak LULUS, silahkan coba tahun depan");
+                break
+        }
     </script>
 </body>
 
