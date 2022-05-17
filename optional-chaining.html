@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>optional chaining</title>
+</head>
+
+<body>
+    <script src="scripts/optional-chaining.js">
+        /*
+        ok optional chaining ni kaya dengan ternary operator juga sama" pake satu tanda tanya (?)
+        cumanya beda di cara penggunaannya saja kalo ternary kan ada dua nilai yg bisa di ambil kalo kondisi true:false
+        dan di pisahkan dengan tanda titik (:)
+        
+        nah kalo optional chaining ini bagusnya tong bisa pake buat cegah error. sperti contohnya
+        tong akses value yg ada dalam object tapi kaya 2dimensi begitu. maksudnya tu ada object di dalam object.
+        contohnya tong mau akses value kota. diamana kota ini ada di dalam object alamat dan alamat ada di dalam object data.
+        jadi untuk mencegah error kalo ternyata key yg bernama kota valuenya nullish. su pasti pas tong cek kota langsung de error.
+        eeh jadi optional chaining ni bisa tong pake untuk cek object dari luar sampe paling dalam.
+        nah kalo tong cek baru ternyata keynya semua ada baru valuenya di akses. tpi kalo valuenya nullish.  apa yg tong mau buat
+        tpi tidak terjadi error program
+        
+        contohnya tong coba akses ni
+
+        let data = {};              <---- ini kan object kosong
+        alert{data.alamat.kota};    <---- nah kalo tong akses kaya bgni pasti terjadi error
+        apapun baris code yg ada di bawah sini tdk akan di eksekusi karna pemanggilan data diatas error
+        
+        nah untuk itu kalo mau akses data biar aman tong pake optional chaining, supaya kalo data nulishprogram masih teteap jalan
+
+        */
+
+        // ado de pu baris code nanti ko cek dalam file js, chaining.js
+        // karna lagi" autocomplete de kasih error tong pu code yg ada di html ni.
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary operator</title>
+</head>
+
+<body>
+    <script>
+        /*
+    ok ternary operator ini operator sederhana dari if statement.
+    nah ternary operator ni mirip dengan kondisi if. tapi de langsung punya dua nilai
+    kalo hasil true maka nilai pertama di ambil tapi kalo false nilai kedua diambil.
+    kaya bgni ni contohnya
+    let data = parameter > 75 ? "parameter lebih besar dari 75" : "parameter lebih kecil dari 75";
+    nah ternary tu kaya di atas tu pake tanda tanya (?) trus de punya dua nilai tu di antara titik dua :
+    jdi nilai yg kiri tu kalau true nanti di ambil kalo yg kanan tu kalo false baru diambil.
+
+    nanti ko lihat code di bawah ni pasti ko paham.
+    */
+
+        let param = 13;
+
+        // disini tong coba bikin pengecekan pake ternary jadi kalo true
+        // nilai yg kiri yg diambil tpi kalo false nilai yg kanan pemisa antara nilainya tu titik dua :
+        const cekNilai = param == 9 ? alert(`${param} == 9`) : alert(`${param} != 9`);
+
+        // contoh lagi ni
+        // kalo pake if kaya bgmn trus klo pake ternary bgmn
+
+        // contoh pake if 
+        const nilai = 90;
+        let ucapan;
+
+        if (nilai > 70) {
+            ucapan = "SELAMAT ANDA LULUS";
+        } else {
+            ucapan = "GAGAL, MAAF SILAHKAN COBA LAGI";
+        }
+
+        document.writeln(ucapan);
+        document.writeln("</br>");
+
+        // kalo pake ternari kaya bgni nanti
+        let ucapan2;
+        // ini contoh ternary lebih singkat dibandingkan if statement diatas
+        ucapan2 = nilai > 70 ? "SELAMAT ANDA LULUS" : "GAGAL, MAAF SILAHKAN COBA LAGI";
+
+        document.writeln(ucapan2);
+        document.writeln("</br>");
+
+        // kesimpulannya kalau ada kasus sederhana pake ternary operator saja
+        // lebih mudah untuk di tulis dan tdk ribet kalo cuma mau cek kondisi sederhana
+    </script>
+
+</body>
+
+</html>

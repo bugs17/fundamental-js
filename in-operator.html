@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>in-operator</title>
+</head>
+
+<body>
+    <script>
+        /*
+        in operator. hasil dari kembalian in ini tu bertipe boolean true or false
+        dan ini di pake untuk mengecek apakah sebuah atribut atau properti ada di dalam sebuah object atau tdk
+        contohnya tong cek apakan dalam object orang{} ada atribut nama k tdk. nah kalau ada nanti hasilnya true
+        dan kalau tdk ada nanti kembaliannya false. in ini tdk hanya di pake buat cek object tapi pada array atau list
+        juga bisa di pake unuk mengecek index pada array. 
+        */
+
+        // data object
+        const person = {
+            "name": "azov",
+            "addresses": "perumnas 3",
+            "hoby": "makan",
+        };
+
+        // data array
+        const array = ["azovy", "bugs", "rina"];
+
+        //ok tong su punya data object diatas skrng coba tong tes pake operator in
+        // untuk cek sebuah properti pada object diatas.
+        // ooh io bugs kalo ko sering ketemu percabanyan if disetiap file. itu
+        // sengaja untuk mengasah ko punya logika if state. supaya logika percabangan makin bagus.
+        // ok tong langsung pake if untuk coba"
+        // tinggal ko pake if di bawah ini untuk pengecekan saja.terserah ko mau
+        // cek data yg mana array k object k. tpi kalo array yg di cek indexnya
+        // trus in ini hanya akan cek propertis/index saja meski datanya undefined atau null tetap de anggap ada kalau propert ada ya ada
+        // kalau object propertisnya.. ko pasti terbiasa dng JS ini bugs. python memang terbaik
+        // tapi ko harus coba JS ini biar semakin terbiasa dengan lingkungan JS
+
+        if ("name" in person) { // disini bisa lihat tong pake operator in. kalau ada
+            alert(`hallo ${person.name}`); // baris ini dieksekusi
+        } else {
+            // ini akan di eksekusi kalau kondisi diatas bernilai false, artinya yg di cek pake in ternyata tdk ada
+            alert("hallo");
+        }
+    </script>
+</body>
+
+</html>
