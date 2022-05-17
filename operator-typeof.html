@@ -19,19 +19,34 @@
         kaya let, kalau variablenya di set dng const nanti tipe datanya trabisa di ubah pada saat pengecekan kondisi.
         */
 
-        let data = prompt("masukan jumlah");
+        // let data = prompt("masukan jumlah");
 
-        if (isNaN(data)) { // disini tong cek pake isNaN() kalo data de bukan number tong beri peringatan
-            alert("masukan angka");
-            //trus disini cek lagi kalo user input string angka tong conversi ke Number(),
-            // disini cuma lakukan operasi inchrement menaikan satu angka pada nilai itu.
-            // nah dan disini tong pake typeof ini. untuk cek.
-        } else if (typeof data === "string") {
-            data = Number(data);
-            data++
-            alert(`data dinaikan satu = ${data}`);
-        } else {
-            console.info("something wrong");
+        // if (isNaN(data)) { // disini tong cek pake isNaN() kalo data de bukan number tong beri peringatan
+        //     alert("masukan angka");
+        //     //trus disini cek lagi kalo user input string angka tong conversi ke Number(),
+        //     // disini cuma lakukan operasi inchrement menaikan satu angka pada nilai itu.
+        //     // nah dan disini tong pake typeof ini. untuk cek.
+        // } else if (typeof data === "string") {
+        //     data = Number(data);
+        //     data++
+        //     alert(`data dinaikan satu = ${data}`);
+        // } else {
+        //     console.info("something wrong");
+        // }
+
+        // biar lebih paham ini kalo dipake untuk cek sebuah data
+        // tong bikin contoh kalo datanya tong ubah" tipenya biar kelihatan
+
+        let cek = 99; // ko coba ganti" tipe" data disini brru lihat de pu hasil dari pengecekan dibawah
+
+        if (typeof cek === "number") {
+            alert(`tipe datanya Number ${cek}`);
+        } else if (typeof cek === "string") {
+            alert(`tipe datanya String ${cek}`);
+        } else if (typeof cek === "boolean") {
+            alert(`tipe datanya Boolean ${cek}`);
+        } else if (typeof cek === "object") {
+            alert(`tipe datanya Object ${cek}`);
         }
     </script>
 
