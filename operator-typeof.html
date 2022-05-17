@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator typeof</title>
+</head>
+
+<body>
+    <script>
+        /*
+        operator typeof ini di pake untuk mengecek type suatu data atau variable
+        seperti contohnya tong mau lakukan operasi aritmatika dari sebuah variable contohnya.
+        nah sebelum lakukan operasinya tong bisa lakukan cek type nya dulu trus bikin kondisi
+        kalau misalnya variablenya bertype selain number lakukan conversi ke number dulu baru abis
+        itu lanjutkan ke operasi aritmatikanya. tapi variable yg sa maksud ni harus variable yg ada akses modif ee
+        kaya let, kalau variablenya di set dng const nanti tipe datanya trabisa di ubah pada saat pengecekan kondisi.
+        */
+
+        let data = prompt("masukan jumlah");
+
+        if (isNaN(data)) { // disini tong cek pake isNaN() kalo data de bukan number tong beri peringatan
+            alert("masukan angka");
+            //trus disini cek lagi kalo user input string angka tong conversi ke Number(),
+            // disini cuma lakukan operasi inchrement menaikan satu angka pada nilai itu.
+            // nah dan disini tong pake typeof ini. untuk cek.
+        } else if (typeof data === "string") {
+            data = Number(data);
+            data++
+            alert(`data dinaikan satu = ${data}`);
+        } else {
+            console.info("something wrong");
+        }
+    </script>
+
+</body>
+
+</html>

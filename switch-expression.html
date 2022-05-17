@@ -28,17 +28,19 @@
         switch (nilai) {
             case "A": // case ni kaya if. jadi maksudnya jika nila == A
                 console.info("selamat ada LULUS dengan nilai A");
-                break // ooh io jng lupa break ini harus di kasih agar dia stop setelah mengeksekusi perintahnya
+                break; // ooh io jng lupa break ini harus di kasih agar dia stop setelah mengeksekusi perintahnya
             case "B": // jika nilai sama dengan B maka ini eksekusi
                 console.info("Selamat anda Lulus dengan nilai B");
-                break
+                break;
             case "C": // jika nilai sama dengan C maka ini eksekusi
                 console.info("selamat anda Lulus dengan nilai C");
-                break
+                break;
             case "D": // jika nilai sama dengan D dan E maka ini eksekusi
             case "E":
                 console.info("Anda tidak LULUS, silahkan coba tahun depan");
-                break
+                break;
+            default: // default ini seperti else. jika semua kondisi di atas false maka default akan di eksekusi
+                console.info("maaf anda mungkin salah jurusan");
         }
     </script>
 </body>
