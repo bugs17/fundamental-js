@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     
-    <title>element</title>
+    <title>NamedNodeMap</title>
 </head>
 <body>
 
@@ -25,11 +25,11 @@
         const attr = logo.attributes
 
         // ini untuk ambil salah satu attr saja.
-        console.log(attr.getNamedItem('src'))
+        console.log(attr.getNamedItem('src'));
 
         // karna de bisa di itersai alias de itu iterable maka tong looping dia pake for of
         for (let atribut of attr) {
-            console.log(`${atribut.name} : ${atribut.value}`)
+            console.log(`${atribut.name} : ${atribut.value}`);
         }
         
 
