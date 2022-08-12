@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>element</title>
+</head>
+<body>
+
+    <h1 id="title" class="active"></h1>
+    <p id="desc"></p>
+    
+
+    <script>
+        const title = document.getElementById("title");
+        title.textContent = "Yoo whasaapp 🤬"
+        
+        const desc = document.getElementById("desc");
+        desc.textContent = "apa yg kamu lagi kerjakan"
+
+
+
+        // ini contoh dari property pada element selain property className masih banyak lagi property" lainnya yg dimiliki element
+        // jadi disini tong cari element dng id titile trus masukan ke variable wl
+        // lalu buat if statemen untuk cek kalau wl mempunyai class active maka set nama classnya jadi inactive
+        // 
+
+
+        let wl = document.getElementById('title')
+
+
+        if (wl.className != 'active'){
+            wl.className = 'inactive';
+        } else{
+            wl.className = 'active';
+            
+        }
+
+
+    </script>
+</body>
+</html>

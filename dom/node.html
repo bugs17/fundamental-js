@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document - Node</title>
+</head>
+<body>
+
+    <ul id="menu"> <!-- satu ini di sebut node dan node ini tong kasih id dan node ini adlah parent dari childnya yaitu elemnt li yg ada di dalmnya -->
+
+        <li id="first">First</li>
+        <li id="second">Second</li>
+        <li id="third">Third</li>
+
+    </ul>
+
+       <script>
+        // mengambil sebuah node dari id nya
+        // nah karna strukturnya seperti pohon jdi ketika tong akses kaya bgni kan yg punya id 'menu'
+        // itu ul kan jadi secara otomatis semua yg ada dal ul juga ikut terpanggil. sama seperti pohon kan
+        // kalau ko peting rantingnya maka daun yg ada di ranting juga ikut terambil bersama ranting tersebut
+        const menu = document.getElementById("menu");
+        console.log(menu);
+
+        // ini property children untuk dapat children dari node dalam variable name diatas
+        console.log(menu.children);
+
+        // kalau ini tong cuma ambil element yg id nya second saja jadi beda dng diatas tong get semua
+        // tpi kalo ini tong cuma dapat satu elemnt li saja karna id 'second' ada pada li kedua dalam ul
+        // ibarat tong cuma ambil daun satu saja tanpa ambil daun lainya dan rantingnya
+        const second = document.getElementById("second");
+        console.log(second);
+       </script> 
+</body>
+</html>

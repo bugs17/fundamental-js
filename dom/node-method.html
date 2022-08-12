@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document property</title>
+</head>
+<body>
+
+    <ul id="menu">
+
+        <li id="first">First</li>
+        <li id="second">Second</li>
+        <li id="third">Third</li>
+
+    </ul>
+
+    <script>
+        const menu = document.getElementById("menu");
+        console.log(menu);
+
+        //method pada node juga ada banyak sekali nanti bisa baca" dokumentasi tentang DOM ini
+        // salah satu contoh method pada node ini ada method yg namanya .removeChild()
+        // nah dng method ini tong bisa remove child yg ada dalam node tersebut nah tong pilih child yg mau dihapus dengan berdasarkan
+        // id juga contohnya kaya dibawah ini
+
+        // nah kalo lihat hasilnya di browser elemnt li dengan id first sudah tidak ada.
+        menu.removeChild(document.getElementById("first"))
+        
+        
+
+    
+        
+        // yg dibawah ini sa komen karna ini akan hapus dan tidak ada elen yg tampul karna tong hapus semua li
+
+        // menu.removeChild(document.getElementById("second"))
+        // menu.removeChild(document.getElementById("third"))
+
+
+
+
+
+
+
+    
+    </script>
+</body>
+</html>

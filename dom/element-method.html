@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document - element method</title>
+</head>
+<body>
+    <!-- nah karna element itu adalah turunan dari node maka method yg ada pada node juga bisa di pake oleh element
+    tapi masuh banyak lagi bukan cuma itu saja nanti bisa cek dokumentasinya untuk lihat ada method apa saja
+    dan kira" masalah yg ko punya method yg ada bisa selesaikan k tidak. remember create an app base on problems so you can solved the problem with your awesome code by BUGS
+    -->
+
+    <div id="content" class="content hallo container">
+
+        <h1 id="title" class="title">This is title</h1>
+        <p id="desc" class="desc">This is description</p>
+
+    </div>
+
+
+    <script>
+        const desc = document.getElementById('desc')
+
+
+        // ini contoh method untuk menghapus element .remove()
+        // nah method ini akan menghapus element dari parentnya. nah jdi desc atau tag <p> ini akan hilang dari
+        // dalam div parentnya atau element parentnya
+        // jadi ibarat kata de bunuh diri bgtu haha de hapus de pu diri sendiri
+        desc.remove()
+
+        // nah untuk code yg lebih singkat tong trausah pake variabel lagi untuk tampung
+        // bisa langsung pasang method di blakannya sperti bgni
+        document.getElementById('title').remove()
+
+
+        // jadi nanti cek" dokumntasi untuk baca method apa saja yg ko bisa pake bugs, biasanya kalo JS update versi baru nanti ada method baru juga yg di tambahkan
+        // mungkin nanti ada method addEventListener() yg paling sering ko pake kalo bikin project
+        // nanti ko pelajari soal method itu juga.. ini tulisan dan pesan dari ko yg dulu bugs sebelum ko mahir JS dan jadi programer hebat di perusahan besar :)
+
+
+</script>
+
+</body>
+</html>

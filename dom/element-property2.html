@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>element</title>
+</head>
+<body>
+
+    <div id="content" class="content hallo container">
+
+        <h1 id="title" class="title">This is title</h1>
+        <p id="desc" class="desc">This is description</p>
+
+    </div>
+
+    
+
+    <script>
+       
+    //  disini tong ambil dulu element berdasarkan de punya id
+        const content = document.getElementById('content');
+
+    //  lalu disini tong coba console log de punya hasil sesuai yg tong mau cari 
+    //  menggunakan peoperty atau argument dari element, ingat ada banyak skali jdi nanti cek di dokumentasinya
+    //  ini cuma beberapa contohnya saja..
+
+    // .id untuk cek id pada element
+    console.log(content.id)
+
+    // untuk cek nama classnya
+    console.log(content.className)
+
+
+    // untuk cek nama tagnya de pake tag apa element ini.
+    console.log(content.tagName)
+    
+    // returnnya berupa namedNodeMap
+    console.log(content.attributes)
+    
+    // untuk menghitung ada berapa child element di dalamnya
+    console.log(content.childElementCount)
+    
+    
+    // kalo yg classList akan return list atau array berupa class" css apa saja yg ada dalam element ini dan berapa jumlah atau lenght sebutannya berdasarkan posisi indexnya juga
+    console.log(content.classList)
+
+    // lastElementChild ini akan mengembalikan child paling terakhil yg ada dalam element ini
+    // contohnya kalo skrng disni nanti akan return element paraghraph atau tag <p> kaya di html di atas element
+    // paling terahir kan <p>
+    console.log(content.lastElementChild)
+    
+    
+    // kalo ini akan kembalikan nama element tersebut dalam bentuk string
+    console.log(content.localName)
+
+
+    // kalo ini akan mengembalikan element disebelahnya
+    // kalo kasus ini pasti return <script> karna di sebelah element div tidak ada element lain selain element tag script
+    // kalo misalnya ada elemeny=t lain di seblahnya berarti itu de punya sibling jdi de akan return element itu
+    console.log(content.nextElementSibling)
+
+    
+
+    // ini sama seperti yg diatas de akan cek sibling juga tapi bedanya ini akan cek sibling yg di atas atau sebel dia sendiri
+    // kalau yg next tdi kan cek element seblahnya tapi sesudahnya kalau prev ni element sibling yg sebelumnya
+    // kalau ada akan di return kalu tdk ada nanti return null
+    console.log(content.previousElementSibling)
+
+
+    // akan return string dari namespace prefix kalau ada kalau tidak di set maka akan return null
+    console.log(content.prefix)
+
+
+    // kalo yg ini akan return string dari nama tag element itu sendiri
+    console.log(content.tagName)
+    
+
+
+    // masih banyak propeerty yg lainnya nanti ko tinggal baca dokumentasi dan gunakan sesuai masalah yg ingin ko pecahkan bugs
+
+    // selanjutnya nanti ko cek tentang method" yg element punya juga ada method" apa saja.
+    // coba cek file element-method.html bugs.. 
+
+    
+
+    </script>
+</body>
+</html>
