@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nodeList</title>
+</head>
+<body>
+
+    
+    <div>
+        <ul id="menu1">
+
+            <li id="list1">list 1</li>
+            <li id="list2">list 2</li>
+            <li id="list3">list 3</li>
+           
+        </ul>
+
+        <ul id="menu2">
+            <li id="bugs">bugs</li>
+            <li id="rina">rina</li>
+            <li id="azov">azov</li>
+        </ul>
+    </div>
+    
+    <script>
+        // kalau yg di maksud dng static nodelist tu kaya bgni coba ko lihat contoh dibawah ini
+        
+
+        // nah disini kan sa su buat query selector untuk get semua node elements li
+        // jadi disini kan returnnya nodelist lenght 6 karna li nya ada 6
+        let list = document.querySelectorAll('li');
+
+        // nah trus disini sa tambahkan lagi dua buah li ke dalam ul dengan id menu satu
+        //jadi harusnya kalo di cek variable list diatas kan harusnya bertambah 2
+        // jdi hasil dari nodelistnya harusnya 8 kan
+        const menu1 = document.getElementById('menu1');
+        
+        const satu = menu1.appendChild(document.createElement('li'));
+        const dua = menu1.appendChild(document.createElement('li'));
+
+       
+
+        // nah tapi ketika di retun nodelistnya masih tetap 6...????
+        // kenapa bisa beda dari yg di file nodeList-live?
+        // yaitu karna queryselector ini mereturn static nodeList
+        // sedangkan getelemntById itu return Live nodeList
+        console.log(list);
+
+
+        // isi pada list yg di render di browser tetap di tambah tpi dapa nodeListnya tidak bertambah kalo ini static nodeList
+        // beda kalau live nodeList yg di file sebelumnya de tetap akan bertambah juga nodeList yg direturn
+
+        
+
+        // nah kalo ini tong coba bikin query ulang baru tong console lagi untuk cek perbedaannya
+        // tapi ya rubah dulu const ke let
+        // nah kalo ini hasilnya sudah jadi 8 lenght nya dari nodeList yg di return
+        list = document.querySelectorAll('li');
+        console.log(list);
+
+
+
+     </script>
+</body>
+</html>

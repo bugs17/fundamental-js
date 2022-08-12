@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nodeList</title>
+</head>
+<body>
+
+    
+    <div>
+        <ul id="menu1">
+
+            <li id="list1">list 1</li>
+            <li id="list2">list 2</li>
+            <li id="list3">list 3</li>
+           
+        </ul>
+
+        <ul id="menu2">
+            <li id="bugs">bugs</li>
+            <li id="rina">rina</li>
+            <li id="azov">azov</li>
+        </ul>
+    </div>
+    
+    <script>
+
+        // nah jadi skrng tong akan bedakan mana nodeLIst yg live dan static
+        // kalau menggunakan queryselectorAll itu nodeListnya live. maksudnya bgmna?
+
+        const menu1 = document.getElementById('menu1');
+        const list = menu1.childNodes;
+
+        // return nya akan ada nodeList dng lenght 7 itu termasuk tipedata text juga yg enter itu.
+        // 
+        console.log(list)
+
+        menu1.appendChild(document.createElement('li'))
+        menu1.appendChild(document.createElement('li'))
+
+        console.log(list)
+
+
+
+        // nah coba di perhatikan di atas sebelumnya kan tong su buat variable dengan childnodes
+        // yg hasilnya 7 nah trus tong append lagi dua element li ke dalamnya harusnya kan dua yg baru ini tidak ikutan masuk ke dalam 
+        // nodelistnya karna tong su deklarasi deluan list variablenya. kenaba pas di console list lagi di akhir
+        // nodelistnya malah ada 9 alias bertambah 2 harusnya kan tetap 7 kan. ini terjadi karena 
+        // document.getElementById() <<---- method ini menciptakan yg namanya live nodes nodes yg live bgtu
+    </script>
+</body>
+</html>

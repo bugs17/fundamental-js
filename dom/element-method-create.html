@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document - element method</title>
+</head>
+<body>
+    
+    <!-- oke kali ini ko coba method create. method createElement() ini de akan bikin element baru yg belum ada
+    jadi ko bikin dulu element baru yg ko mau buat
+    conohnya di bawah ini ko lihat ada element div tapi isinya kosong tidak ada child element di dalamnya
+    nah ko bisa buat element baru pake JS dengan method createElement() -->
+
+    <div id="content" class="content"></div>
+
+
+    <script>
+        
+        // disini ko ambil dulu element parentnya dan kasmasuk ke dalam variable
+        // contohnya disini sa kasmasuk element dng id content yaitu div kosong diatas tu ke dalam variable
+        // yg sa kasih nama variablenya content.
+        const content = document.getElementById('content');
+
+        // trus disini sa bikin element baru. contohnya sa mau bikin titile ee jdi pake tag <h1>
+        // dan sa taruh dalam variable namanya titile
+        // kaya di bawah ni di apit tabda kutip trausah pake pembungkus tanda kutip trus nama tagnya saja
+        // nah ko punya element baru sudah ada tapi blum ada content di dalamnya textContent eeh
+        // su ada dalam variable titile ingat
+        const titile = document.createElement('h1');
+
+        // disini tong isi textTitle dulu ke dalam element baru yg tong baru buat tu
+        titile.textContent = 'Ini di buat dari method .createElement() pada JS';
+        // nah ko sudah bikin element baru trus ko su isi text ke dalam elemnt itu juga skrng
+        // tinggal ko masukan element baru yg su jadi itu ke dalam parrent elemenya.
+        // parent elemnt itu content di atas variable content jadi ko tinggal pake method appendChild()
+        content.appendChild(titile);
+
+
+
+
+        // ok skrng bikin satu lagi pake tag p untuk bikin paragraph
+
+        const desc = document.createElement('p');
+        desc.textContent = 'deskripsi ini juga di inject dari JS code tidak di tulis langsung pada html tag, tapi di manipulasi domnya sebelum di render oleh browser'
+        content.appendChild(desc)
+
+
+
+    </script>
+
+</body>
+</html>

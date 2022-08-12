@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nodeList</title>
+</head>
+<body>
+
+    <!-- jadi nodeList ini tipe data yg ada pad DOM nodeList ini adalah object yg berisikan kumpulan dari node node didalamnya
+    jadi nodeList ini bisa di gunakan untuk iterasi iterable seperti method foreach() untuk melakukan iterasi terhadap object yg
+    ada di dalamnya 
+    
+    -->
+    <div>
+        <ul id="menu1">
+
+            <li id="list1">list 1</li>
+            <li id="list2">list 2</li>
+            <li id="list3">list 3</li>
+           
+        </ul>
+
+        <ul id="menu2">
+            <li id="bugs">bugs</li>
+            <li id="rina">rina</li>
+            <li id="azov">azov</li>
+        </ul>
+    </div>
+    
+    <script>
+
+        // nah querySelectorAll() ini de akan mereturn sebuah nodeList
+        // yg isinya sekumpulan node node sesuai dengan selectornya
+        // contoh kali ini de akan kembalikan semua node dengan tag li
+        // nanti ko cek di console log untuk lihat return nodeListnya
+        // disana ada panjang listnya atau lenght nya trus ada li nya sendiri dan ada idnya juga beserta urutan indexnya        
+        const list = document.querySelectorAll('li');
+        console.log(list);
+
+        // ini contoh tong lakukan iterasi atau loop dari object nodeList dan hasil dari iterasi masing-masing
+        // tong masukan ke variabel x dan di block kode terserah apa yg mau di bikin enath hapus atau ganti isinya bisa saja
+        // kalau hapus tinggal x.remove()
+        // kalau mau ganti textContent nya tinggal x.textContent = 'isi dengan text yg mau di ganti'
+        // tergantung kebutuhan saja bugs di contoh dibawah ini sa cuma tinggal print hasil masing" dari object yg sudah di iterasi
+        // 
+        
+        list.forEach(x => {
+            console.log(x)
+        });
+
+
+        // nah kalau di atas tong querynya tu ambil semua li jdi li yg ada pada ul pertama dan ul kedua juga ikut di ambil
+        // nah kalo mau ambil list dari ul tertentu saja bisa tambah .childNotes di blakang queryselector kaya bgni ni
+        // nah ini tong ambil nodes anak hanya dari node yg idnya menu2 otomatis tong akan dapat 3 li yg isinya nama nama
+        // kalau perkiraan kan harusnya return nodeList yg lenghtnya 3 juga sama sperti di atas nodeList
+        // de return li semu dan lenghtnya ada 6. nah ini yg harus di ingat bahwa kalau code kaya di bawah ini de return
+        // nodeList dengan lenght 7. bah knp bisa bgtu???
+        // karna tong ambil semua childNotes yg ada dalam parent Node dan ada spasi itu juga di anggap text
+        // jadi dari ul ke li pertama kan ada enter tu di anggap text jdi bahaya kalao mau di lakukan iterasi ni
+        const list2 = document.getElementById('menu2').childNodes
+        console.log(list2)
+
+        // de akan return nodeList dengan lenght3 sesuai keinginan kalo dari ul pembuka sampe ul penutup termasuk li nya semua sejajar tanpa spasi atau enter
+
+
+    </script>
+</body>
+</html>
