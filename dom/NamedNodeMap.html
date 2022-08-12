@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>element</title>
+</head>
+<body>
+
+    
+
+    
+    <!-- nah NamedNodeMap ini morip seperti nodeList yg tong su blajar sebelumnya. de akan 
+    return data object jadi tong bisa iterasi menggunakan for of
+    
+    -->
+     
+     <img id="logo" src="https://developer.mozilla.org/assets/mdn_contributor.png" alt="LOGOBUGS">
+
+
+     <script>
+
+        // ok pertama tong get dulu element mana yg ong mau cek attr nya karna tong pu element cuma satu jadi ayo
+
+        const logo = document.getElementById('logo');
+        const attr = logo.attributes
+
+        // ini untuk ambil salah satu attr saja.
+        console.log(attr.getNamedItem('src'))
+
+        // karna de bisa di itersai alias de itu iterable maka tong looping dia pake for of
+        for (let atribut of attr) {
+            console.log(`${atribut.name} : ${atribut.value}`)
+        }
+        
+
+     </script>
+
+</body>
+</html>

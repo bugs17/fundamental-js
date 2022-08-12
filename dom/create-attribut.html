@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>element</title>
+</head>
+<body>
+
+    
+    <!-- src="https://developer.mozilla.org/assets/mdn_contributor.png" -->
+     
+     <img id="logo"  alt="LOGOBUGS">
+
+
+     <script>
+
+        // ok di yg sebelumnya tong su coba untuk get atribut yg ada dalam element entah itu mengambil 
+        // attr dengan key value atau ambil valuenya saja dan mengambil semua attr yg ada dalam element skrng bgmn kalo tong mau tambah attr baru ke sebuah ellemant
+
+
+        // ok tong get dulu element mana yg mau disisipi sebuah attr
+        // lalu masukan ke variable disini sa contohkan tong masukan ke variable logo
+        const logo = document.getElementById('logo');
+
+        //contohnya di element img diatas blum ada attr src kan skrng tong buat dulu attr srcnya lalu masukan ke dalam element
+        // kaya bgni
+        logo.setAttribute('src', 'https://developer.mozilla.org/assets/mdn_contributor.png')
+
+        // kalo di lihat di html diatas element img tdk mempunyai src, tpi tong sudah menulis code JS
+        // untuk memasukan attr src beserta valuenya ke dalam element img jadi kalau di load di browser gambarnya sudah tampil
+        // padahal tdk ada sama skali yg dipasang. ok langsung coba di console
+       
+        // jadi dengan bgni ko bisa tau bahwa dng JS DOM bisa di manipulasi
+        // apapun yg di tampilkan di halam web bisa di manipulasi dengan memanipulasi DOM nya
+
+     </script>
+
+</body>
+</html>

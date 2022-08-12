@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>element</title>
+</head>
+<body>
+
+    <!-- 
+        nah disingkat dengan nama Attr ini artinya atribut.
+        atribut dari sebuah element atau key-value
+        key adalah nama atributnya dan value adalah isi atributnya.
+        kaya contohnya id = 'bugs'   <-- nah id adalah key nya dan bugs adalah valuenya
+
+        nah kalau Attr ini tidak ada methodnya..
+        dan harus di ingat bahwa key dari sebuah Attr tidak bisa di ubah alisa read only
+        sdangkan value dari sebuah key nya bisa di ubah,
+     -->
+
+     
+     <img id="logo" src="https://developer.mozilla.org/assets/mdn_contributor.png" alt="LOGOBUGS">
+
+
+     <script>
+
+        //nah disini tong coba ambil dulu sebuah element dan masukan ke variabel
+        // tonf ambil element dengan id logo dan masukan ke variabel logo
+        const logo = document.getElementById('logo');
+
+        //trus tong ambil lagi atribut dari element diatas tong ambil de punya 
+        // atribut src atau source karna element yg tong get tu img dan de punya src
+        // trus masukan ke dalam variable namanya src
+        const src = logo.getAttributeNode('src');
+        const alt = logo.getAttributeNode('alt');
+
+        // lalu dibawah ini tong console untuk cek key dari attr dan value dari attr itu juga
+        // key disini menggunakan kata kunci name dan value tetap pake kata kunci value
+        
+        console.log(src.name) // keynya adalah src atribut src pada html
+        console.log(src.value) // lalu value dari src kebetulan disini tong pake link ke internet kalau src nya dari storage juga nanto outputnya juga mengarah ke path yg dipasang
+     
+        // ini contoh untuk atribut alt
+        console.log(alt.name)
+        console.log(alt.value)
+
+        // trus bgmn dengan kalo tong mau cek kira" atribut apa saja yg ada pada element???
+        // begini kalau mau cek semua Attr yg ada pada element
+        // de akan return sebuah list dengan lenght tergantung dengan jumlah atribut yg ada pada elementnya
+        const semuaAttr = logo.getAttributeNames()
+        console.log(semuaAttr)
+        
+
+        //trus kalo tong mau langsung dapat valuenya bgmn?
+        // bgni, kalau getAtrribute saja tanpa node atau names lagi di belakanya itu berarti langsung mengambil value
+        // dari key dari atribut mana yg di minta. contohnya disini akan kembalikan link dari src karna value dari attr src adalah sebuah link external
+        console.log(logo.getAttribute('src'))
+
+     </script>
+
+</body>
+</html>
