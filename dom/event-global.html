@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+<body>
+
+
+    <!-- 
+        bedanya sama event target yg sebelumnya itu kalau yg event global ini
+        de cuma bisa sekali pasang eventhandlernya jadi ibarat kalau yg sebelumnya tu tong bisa psang dua handler sekaligus
+        jadi ketiku terjadi click sekali dua callback bisa di jalankan langsung
+        dan cara pemakaiannya juga kalau yg ini biasanya tu kalau namaVariabel.onClick  <<-- kaya bgni
+        ada .onClick di depannya. ini sama saja onClick ni representasi dari event targer yg click di materi sebelumnnya bugs
+        .....
+     -->
+    <input id="clickMe" type="button" value="click saya" />
+ 
+    
+    
+    
+   
+    <script>
+
+        //
+        const clickMe = document.getElementById('clickMe');
+        
+
+        // ini contoh dari yg add event listener ni
+        // clickMe.addEventListener('click', ()=>{
+        //     clickMe.setAttribute('value', 'saya sudah di click');
+        // });
+
+        // nah ini yg global event handler jadi onclick trus sama dengan apa. disitu functionnnya
+        // dipasang kaya di contoh dibawah ini
+        // nanti ko bisa bedakan dengan yg sa ada comment di atas kedua script itu ko bedakan nanti
+        // yg ini lebih simpel
+        clickMe.onclick = ()=>{
+            clickMe.setAttribute('value', 'saya sudah di click');
+        }
+
+    </script>
+
+</body>
+</html>

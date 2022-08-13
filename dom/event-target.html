@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+<body>
+
+
+    <!-- 
+        jadi eventHandler ini untuk sebagai event ketika sebuah node di lakukan sesuatu apa yg 
+        tong mau lakukan, ibarat ada yg jada element itu bgtu pass ada sesuatu terjadi langsung lakukan sesuatu
+        jadi sesuatu yg terjadi ni sebutlah kejadian atau event, event juga ada macam"
+        ada click ada hover: yg pointer sentuh tpi tdk click lalu click tpi pake input dari keyboard
+        kaya crl+click atau lain sebagainya, nah itu eventlistener namanya. trus ketika kejadian itu terjadi
+        apa yg tong mau lakukan dengan element tersebut atau effectnya mau di uat dng element/node yg lain juga bisa
+        kaya contoh pass click tombol langsung tombbol berubah warna juga bisa, ko lakukan kreasi sendiri intinya ko tau kalo
+        ada fitur kaya bgni di JS DOM biar bisabantu solve ko punya aplikasi nanti. :) 
+     -->
+    <input id="clickMe" type="button" value="click saya" />
+ 
+    
+    
+    
+   
+    <script>
+
+        // jadi seperti biasa tong get dulu node atau elemnt berdasarkan id dan masukan kedalam variable
+        // variabel disini sa kasih nama clickMe
+        const clickMe = document.getElementById('clickMe');
+        
+
+        // setelah itu tong pasang addEventListener ke clickMe 
+        // dengan set eventnya itu click (jadi ketika ada event click apa yg mau di lakukan)
+        // parameter kedua di eventListener ini functio jadi setelah parameter pertama yaiutu click
+        // maka parameter kedua function di jalakan terserah itu mau function apa, ini yg di sebut dengan fungtion callback
+        // jadi ada function eventListener di dalamnya lagi ada function callback yaitu apa yg mau di lakukan ketika di click
+        // disini sa pake arrow function tpi sebenarnya ko bisa pake function apapun mau itu anonymous function juga bisa
+        // ........
+        clickMe.addEventListener('click', ()=>{
+            clickMe.setAttribute('value', 'saya sudah di click');
+        });
+    </script>
+
+</body>
+</html>
