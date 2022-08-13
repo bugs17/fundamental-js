@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event globsl</title>
+</head>
+<body>
+
+
+    <h1 id="text">ko click pada kordinat (0, 0)</h1>
+    <div id="canvas" style="width: 500px; height: 500px; background-color:bisque"></div>
+
+
+
+    <script>
+
+        //
+        const canvas = document.getElementById('canvas');
+        let text = document.getElementById('text');
+        
+        canvas.onclick = function (event){
+            text.textContent = `ko click pada kordinat (${event.x}, ${event.y})`
+        }
+
+        // ini cuma event click saja tpi nanti ko bisa cek lagi yg lain event" apa saja yg ada..
+
+
+    </script>
+
+</body>
+</html>

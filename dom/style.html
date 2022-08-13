@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event globsl</title>
+</head>
+<body>
+
+    <!-- 
+        nah skrng tong coba untuk manipulasi attr style pada element menggunakan event global
+        yaitu event click, jdi skenarionya tong bikin 3 button dengan value sesuai warna yg tong mau
+        kasih tampil nanti, jadi setiap kali tombol warna ditekan nanti canvas kotak ini de punya background-color
+        beribah sesua warna yg tong set di tombol...
+        jadi kaya bgtu.. ada 3 tombol dengan satu canvas masing" punta id
+     -->
+
+    <div style="margin-bottom: 10px;">
+        <div>
+            <p>ketika mouse pergi</p>
+            <input id="biru" type="button" value="biru"></input>
+        </div>
+        <div>
+            <p>ketika di click</p>
+            <input id="kuning" type="button" value="kuning"></input>
+        </div>
+        <div>
+            <p>ketika mouse sentuh</p>
+            <input id="hitam" type="button" value="hitam"></input>
+        </div>
+    </div>
+
+    <div id="canvas" style="width: 500px; height: 500px; background-color:bisque"></div>
+
+
+
+    <script>
+        // nah disini tong get dulu semua element yg tong mau ambil
+        // dari ketiga tombol dan juga element dng id canvas itu
+        // trusmasukan ke dalam variabel masing nama bebas saja
+        const biru = document.getElementById('biru');
+        const kuning = document.getElementById('kuning');
+        const hitam = document.getElementById('hitam');
+        const canvas = document.getElementById('canvas');
+
+        // tong set event untuk masing" tombol disini dan juga function yg mau dipanggil
+        // beserta reaksi apa yg akan di buat ketika function di panggil
+        // ini rubah canvas punya bg ke warna hitam menggunakan method style.namastyle = 'value dari style disini'
+        
+        // ini eventnya tong set pas mouse de hover atau pas mouse kena button langsung 
+        // panggil fungtion.. jadi bgtu mouse masuk di tombol langsung event terjadi
+        hitam.onmouseover = function (){
+            // kaya bgni ni maksudnya.. mau background k mau apa terserah
+            canvas.style.backgroundColor = 'black'
+
+            // ini untuk print di console nanti ko cek di sonsole
+            console.log('saya berubah jadi hitam!!!')
+        };
+
+        // ini juga sama begitupun dengan yg terahir
+        // kalo yg ini biasalah ee cuma ketika di click
+        kuning.onclick = function (){
+            canvas.style.backgroundColor = 'yellow'
+            console.log('saya berubah jadi kuning!!!')
+        };
+
+        // yg ini eventnya bgtu mouse masuk ke button dan pas de mau kluar dari button langsung 
+        // kejadiannya terjadi
+        biru.onmouseleave = function (){
+            canvas.style.backgroundColor = 'blue'
+            console.log('saya berubah jadi biru!!!')
+        };
+
+    </script>
+
+</body>
+</html>
