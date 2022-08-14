@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax send</title>
+</head>
+<body>
+    
+    <form >
+        <label for="username">
+            Username :
+            <input type="text" id="username" name="username">
+        </label>
+        <br>
+        <label for="password">
+            Password:
+            <input type="password" name="password" id="password">
+        </label>
+        
+        <br>
+        
+            <input type="button" id="login" value="LOGIN">
+        <br>
+
+        <p id="status"></p>
+    </form>
+
+    <script>
+        
+
+        const button = document.getElementById('login');
+
+        function doLogin(){
+            // duabuah variable ni ingat jng set di luar function. karena ini mau ambil value dari element input
+            // dan dikirim sebagai data json jadi harus dideklarasi di dalam function tersebut.
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const status = document.getElementById('status');
+            const ajax = new XMLHttpRequest()
+            ajax.open('POST', 'https://hookb.in/qBOzlZEgNyhEqJGEywEq');
+            ajax.onload = ()=>{
+                
+                // ini untuk menunjukan response dari server.kalau misalnya POST request succses
+                // maka element p tong isi textContent dng tulisan Login sukse
+                // cara validasinya ya simple cukup cek status code kalo response status code 200
+                // ya kasih eksekusi code programnya pake status code kalo status 200 ya eksekusi
+                // kalo bukan 200 ya kasih apa k???
+                
+                if(ajax.status === 200){
+                    status.textContent = 'Login sukses'
+                }
+                
+                
+            }
+
+            ajax.setRequestHeader('Content-Type', 'application/json');
+            ajax.send(JSON.stringify({
+            username: username,
+            password: password,
+            
+            }))
+        }
+
+        
+
+        button.onclick = doLogin;
+    </script>
+
+</body>
+</html>
