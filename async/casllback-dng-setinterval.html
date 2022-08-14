@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback setTimeout</title>
+</head>
+<body>
+
+   <h1 id="header"></h1>
+
+     <script>
+
+
+        // nah bedanya sama settimeout kalo setinterval ini de akan panggil funtion callbacknya ulang"
+        // jadi disini seolah" tong bikin kaya ada jam yg berjalan detiknya karna setiap detik funtion
+        // callbacknya di panggil terus
+        const setTime = () =>{
+            
+            const header = document.getElementById('header');
+            header.textContent = new Date().toString();
+            
+            // disini contohnya tong coba console biar kelihatan kalo
+            // memang func ini di panggil ulang-ulang
+            console.log('dipanggil lagi dan lagi')
+        }
+
+        
+        setInterval(setTime, 1000);
+
+
+
+
+
+     </script>
+    
+</body>
+</html>

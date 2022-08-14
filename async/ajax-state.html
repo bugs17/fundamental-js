@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax state</title>
+</head>
+<body>
+    <!-- 
+        daftar ajax state ini dalam bentuk number ya
+        ------------------
+        (ini artinya sudah dibuat tapi blum di send atau dikirim)
+        0 ======== UNSET ===== client has been created. open() not called yet.
+
+        (kalau ini berarti opennya sudah di panggil)
+        1 ======== OPENED ===== open() has been called
+
+        (kalau yg statenya 2 ni berarti header sudah di panggil jadi header dan statusnya sdh ada)
+        2 ======== HEDAERS_RECEIVED ==== send() has been called, and headers and status are availaber.
+        
+        (kalau yg statenya 3 ini berarti sedang mendownload respon dari server)
+        3 ======== LOADING ===== Downloading: responseText holds partial data.
+
+
+        (kalau statenya 4 berati sudah beres. sudah selesai proses requestnya dan responsenya juga sudah dibaca sama si ajax ini)
+        4 ======== DONE ======== The operation is complete.
+     -->
+
+
+
+     <!-- 
+        nah ada lagi yg namanya ready state change event. ini kalau nanti ko blajar react pasti ko akan sering pake
+        ini dasarnya jadi ko pahami disini dulu. nah ini tu ada eventListerner yg namanya 'readystatechange'..
+        sa kasih contoh sdikit ni. ini seperti kaya ko lihat halaman facebook dibagian komentar pada postingan tu kan tiap kali
+        ada orang yg koment langsung komentar itu update sendiri, nah itu karna ada event yg namanya readystatechange ini
+        jdi tong pasang eventlistener di element komentar iru untuk menunggu kalau ada perubahan data pada element itu tong langsung render dia
+        ke browser. kira" seperti bgtu. cara penggunannya mari tong explore sama" tra perlu ko hafal initinya ko tau ada fitur semacam ini untuk
+        menyelesaikan ko punya masalah pada aplikasi nanti. keep learning until u beat the big company with your apps BUGS.. :)
+
+      -->
+
+      <script>
+        // bikin object baru dari ajax itu sendiri
+        const ajax = new XMLHttpRequest();
+
+        // const printState = ()=>{
+        //     console.log(`Ready state change ${ajax.readyState}`)
+        // }
+
+        // tong pasang onreadystatechange dan func callbacknya
+        // mau arrow func k anonymous k terserah ko disini sa pake arrow func
+        ajax.onreadystatechange = ()=>{
+            console.log(`Ready state change ${ajax.readyState}`)
+        }
+
+
+        // terserah ko mau pake yg ini k yg onreadystatechange terserah ko
+        // tapi kalo ko mau pake yg ini ko uncomment dullu function callbacknya diatas
+        // ajax.addEventListener('readystatechange', printState())
+
+      </script>
+
+
+
+
+
+</body>
+</html>

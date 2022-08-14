@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback setTimeout</title>
+</head>
+<body>
+
+    <!-- 
+        ok kali ini tong akan coba pahami apa itu callback function
+        itu sebenarnya function yg akan di panggil kembali dalam rentang waktu tertentu,
+        tanpa harus menunggu sampai proses selesai tong bisa lanjut ke baris code berikut, dan nanti kalau proses
+        dari code sebelumnya selesai maka callback function tu akan di panggil. callback func bisa berupa anonymous func atau variable func atau juga arrow func
+        ni dibawa ini contohnya callback sederhana pake setTimeout
+     -->
+
+     <script>
+
+        const addElement = () =>{
+            // tong bikin element heding
+            const header = document.createElement('h1');
+            header.textContent = 'baru sa muncul setelah 5 detik!!!!!';
+
+            // tong masukan variabel heade yg isinya h1 dengan tilisan hallo bugs kedalam element body
+
+            document.body.appendChild(header);
+        }
+
+        // nah disini ni callbacknya, jadi function addElement dimasukan sebagai
+        // parameter pertama dan parameter kedua waktu dalam milisecond 5000 berarti 5 detik to
+        // jadi setelah 5 detik function addElement akan di panggil
+        // jadi kalau ada proses di bawah setTimeout maka de akan di kerjakan saja tanpa tunggu
+        // selama 5 detik, kalau syncronus kan de harus tunggu yg diatas selesai baru yg di bawah to
+        // nah kalo ko perhatikan baik" itu kan function di parameter pertama function callback namanya.
+        // tapi tong tidak tambahkan tanda tutup dan buka kurung sperti ini addElement(), tong cuma
+        // panggil namanya. itu artinya de tdk akan di eksekusi langsung de akan di tunggu selama rentang waktu yg di tentukan
+        // baru de di panggil kalau langsung di kasih tanda kurung itu de akan di eksekusi dan tong akan tunggu sampe de selesai bru code berutnya 
+        // di eksekusi lgi. itu rawan kalau ternyata backend service respon lambat maka aplikasi frontend juga
+        // akan lambat di load di browser karna harus tunggu proses request ke backend selesai dulu
+        // ingat JS mi run di browser jdi biarlah yg di browser tampil dluan tanpa ketergantungan waktu dng request ke server
+        setTimeout(addElement, 5000);
+
+        //yg ini akan muncul deluan baru yg diatas
+        const tulisan = document.createElement('p');
+        tulisan.textContent = 'sa muncul deluan';
+
+        document.body.appendChild(tulisan);
+
+
+
+        
+        // nanti ko coba cek di console nanti tulisan ini su di eksekusi deluan
+        // baru addElement di panggu=il setelah rentang waktu yg di tentukan.
+        // diatas tong set 5 detik jadi setelah 5 deting nanti baru h1 muncul di halaman web
+        // oke keren to..
+        // proses ini namanya asynccronus. ini nanti tong pake kalau render halaman web ke browser
+        // tapi tong juga ada request data ke server seperti tong ada minta dala apa bgtu ke server di database
+        // tong tra perlu tunggu sampai respon dari server tong trima baru tong tampilkan semua halaman
+        // nantikan kelihatan halam load lama. jadi halaman kaya header footer dan yg static tu load dluan
+        // yg butuhkn data dari database atau server nanti de datang setelah proses request selesai lalu dejuga di tampilkan
+        // jdi timeout yg skrng tong pake ni ibaratkan waktu lamanya request data ke server..
+
+        console.log("sa jalan deluan sebelum h1 di render");
+     </script>
+    
+</body>
+</html>

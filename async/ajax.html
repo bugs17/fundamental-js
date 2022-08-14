@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+    <h1 id="response"></h1>
+
+    <!-- 
+        ajax ini javascript asyncronus. ajax ini sudah ada dalam js
+        de tu salah satu class yg sudah ada. tugasnya dia tu untuk melakukan request
+        dan menerima request dari server..
+        nah karna de sebuah class untuk pake dia tu tong harus bikin sebuah object dulu dari class ajax itu
+        nama classnya tu XMLHttpRequest();
+        mari tong coba bikin..
+     -->
+
+     <script>
+        // ini tong bikin object baru dari class ajax tu
+        const ajax = new XMLHttpRequest();
+        
+        
+        // ini untuk mengecek ready statenya ajax nanti ko cek di file ajax-readystate.html
+        ajax.onreadystatechange = ()=>{
+            console.log(`Ready state change ${ajax.readyState}`)
+        }
+        // jadi pake open() untuk lakukan request,
+        // trus de punya dua parameter yg pertama tu http methodnya
+        // karna disini request maka tong pake 'GET'.
+        // parameter kedua endpoint nya atau ulr lah bilangnya.
+        ajax.open('GET', 'api/hello.json');
+        
+        // untuk menerima response dari server
+        // nah tong tambahkan eventlistener atau mau pake onload juga bisa
+        // abis itu function callbacknya diset, trus didalamnya tong parse dulu respon jsonnya
+        // abis itu ceritanya tong kasihmasuk ke element h1, tinggal tong set saja variabel h1 ru text contentnya
+        // sesuai dengan data response dari json nya keynya disini nama, jadi tinggal json.nama; beres
+        ajax.addEventListener('load', function(){
+            
+            // untuk lebih amannya tong validasi dulu menggunakan status code http
+            // tong bisa cek dengan cara object.status disini tong pu object de punama ajax jdi ajax.status
+            // nah tong cek kalo status 200 maka tong render response nya
+            // tpi klo status bukan 200 maka tong tampilkan pesan dengan isi status codenya yg diskirim dari server
+            // nanti ko baca" soal http status code lagi banyak di internet.
+            if(ajax.status === 200){
+                const json = JSON.parse(ajax.responseText);
+                const header = document.getElementById('response')
+                header.textContent = json.nama;  
+                const getNama = json.nama
+                console.log(getNama)
+            }else{
+                const header = document.getElementById('response')
+                header.textContent = `something happend.... status: ${ajax.status.toString()}`
+            }   
+          })
+        
+        // nah trus untuk mengirim requestnya
+        // tong pake method send()
+        ajax.send();
+     </script>
+    
+</body>
+</html>
