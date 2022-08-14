@@ -47,7 +47,7 @@
                 // cara validasinya ya simple cukup cek status code kalo response status code 200
                 // ya kasih eksekusi code programnya pake status code kalo status 200 ya eksekusi
                 // kalo bukan 200 ya kasih apa k???
-                
+
                 if(ajax.status === 200){
                     status.textContent = 'Login sukses'
                 }
@@ -56,6 +56,13 @@
             }
 
             ajax.setRequestHeader('Content-Type', 'application/json');
+            
+            // di dalam send ini tong isi parameter data yg mau dikirim jadi nanti di http request body nya
+            // karna ini post request tong mau kirim data jadi nanti di http request post bodynya ada data
+            // nah di ajax method send ini tong isi dengan parameter datanya.
+            // tong bisa juga bikin stringify nya di luar dulu di dalam sebuah variable nanti baru variablenya tong isi di parameter sini
+            // tapi karna ini latihan jadi langsung tong stringify saja dalam parameter sini.
+            
             ajax.send(JSON.stringify({
             username: username,
             password: password,
