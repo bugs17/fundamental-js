@@ -29,7 +29,7 @@
         <thead>
             <tr>
                 <th>Filter : </th>
-                <th><input type="text" name="search"></th>
+                <th><input type="text" id="search" name="search"></th>
             </tr>
         </thead>
         <tbody id="todolistbody">
@@ -43,21 +43,27 @@
 <script>
     const todolist = [];
 
+
+    // untuk membersihkan listview saat melakukan add agar tidak 
+    // dobol pada saat add.
     function clearTodolist(){
         const todolistbody = document.getElementById('todolistbody');
         while(todolistbody.firstChild){
             todolistbody.removeChild(todolistbody.firstChild);
         }
     }
-    
-    function displayTodoList(){
 
-        clearTodolist();
+
+    // jadi ini function untuk menghapus data todolistnya berdasarkan indexnya
+    // tong ada lempar parameter index dalam function tu
+    function removeTodoList(index){
+        todolist.splice(index, 1);
+        displayTodoList();
+    }
+
+    function addTodolist(index, data){
         
-        for (let i = 0; i < todolist.length; i++){
-            const data = todolist[i];
-            
-            if (data !== ''){
+                if (data !== ''){
                 const tr = document.createElement('tr');
                 const tdButton = document.createElement('td');
                 tr.appendChild(tdButton);
@@ -65,6 +71,11 @@
                 const buttonDone = document.createElement('input');
                 buttonDone.type = 'button';
                 buttonDone.value = 'DONE';
+                // pada saat bikin button baru tong langsung tambahkan event
+                // onclick di setiop button langsung. dan panggil function remove yg tong su buat diatas
+                buttonDone.onclick = ()=>{
+                    removeTodoList(index);
+                } 
                 tdButton.appendChild(buttonDone);
 
                 const tdTodo = document.createElement('td');
@@ -73,25 +84,79 @@
 
                 const todolistbody = document.getElementById('todolistbody');
                 todolistbody.appendChild(tr);
+            
+
+    }}
+    
+    // disini funtion displaynya. dari setiap list yg di input mau ditampilkan
+    // kita buat func nya disini ni
+    function displayTodoList(){
+
+        //sebelum di tampilkan di td yg list kita clear dulu firstchilnya dengan
+        // func yg tong buat sebelumnya..
+        clearTodolist();
+        
+        // disini tong lakukan loop for i karna tong butuh index dari setiap list nantinya
+        // jdi pake for i saja biar bisa tampung indexnya
+        // tong simpan masing'' dari tudu list ke dalam variabel data, yg isinya list berdasarkan
+        // indexnya..
+        for (let i = 0; i < todolist.length; i++){
+            const data = todolist[i];
+            
+            const searchText = document.getElementById('search').value.toLowerCase();
+            
+            // disni juga pass add data tong lempar sekalian argumen i nya alias indexnya
+            if(data.toLowerCase().includes(searchText)){
+                addTodolist(i, data);
+
             }
+                
+             }
+
+
+            // agar tong tra masukan string kosong ke dalam daftar todolist 
+            // tong lakukan validasi dulu kalau data todolist yg di input tidak sama dengan string kosong
+            // bru jalankan perintah creat element tr, td lalu di appendchil begitu juga dengan textContent
+            // untuk menuliskan nama todonya. nah jdi skrng tong sudah punya list dng tombol done dan masing" mempunyai index. anggap saja itu ID dari
+            // masing" todolistnya..
+            
 
             
         }
 
 
-    }
 
 
+
+    
     document.forms['todoform'].onsubmit = function(event){
+        
+    
         event.preventDefault();
 
         const todo = document.forms['todoform']['todo'].value
         todolist.push(todo);
 
+        // nah setelah di submit tong reset form nya lagi biar formnya kembali osong lagi.
         document.forms['todoform'].reset();
 
+        // nah disini ni function yg tong su buat panjang diatas tu tong panggil disini
+        // function untuk menampilkan yg di input
         displayTodoList()
 
+        // disini tong bikin buat pencarian listnya atau filter.
+        const searchInput = document.getElementById('search');
+
+        searchInput.onkeyup = ()=>{
+            displayTodoList()
+        };
+        searchInput.onkeydown = ()=>{
+            displayTodoList()
+        };
+
+        //jadi urutannya tu tong terima inputan trus masukan dalam array lalu looping setiap nilai di aray dan
+        // di tampilkan looping dan tampilkan dan creat element buat td tombol done dan td textContent itu
+        // tong lakukan di func display. kalau ambil value dan simpan di array tong langsung lakukan di event listener sini saj di atas tu barusan.
     };
 
 
